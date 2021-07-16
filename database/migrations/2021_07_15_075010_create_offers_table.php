@@ -15,11 +15,11 @@ class CreateOffersTable extends Migration
     {
         Schema::create('offers', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->nullable();
-            $table->string('email')->nullable();
-            $table->string('phone')->nullable();
-            $table->string('vacancy')->nullable();
-            $table->string('file')->nullable();
+            $table->string('name')->comment('имя кандидата')->nullable();
+            $table->string('email')->comment('email кандидата')->nullable();
+            $table->string('phone')->comment('телефон кандидата')->nullable();
+            $table->string('vacancy')->comment('претендует на должность')->nullable();
+            $table->string('file')->comment('резюме кандидата')->nullable();
             $table->timestamps();
         });
     }

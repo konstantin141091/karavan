@@ -15,8 +15,8 @@ class CreateVacanciesCategoryTable extends Migration
     {
         Schema::create('vacancies_category', function (Blueprint $table) {
             $table->mediumIncrements('id')->unsigned();
-            $table->string('name');
-            $table->string('slug');
+            $table->string('name')->comment('название категории по русски');
+            $table->string('slug')->comment('название категории по английски');
             $table->timestamps();
         });
     }
