@@ -12,6 +12,9 @@ class AdminController extends Controller
         return view('admin.index');
     }
 
+    // метод принимает request, в нем массив contents
+    // метод принимает request, в нем массив contents
+    // contents имеет структуру описанную в /resources/views/example/save_content.js
     public function editContent(Request $request) {
         try {
             $data = $request->contents;

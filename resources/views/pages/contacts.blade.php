@@ -1,4 +1,6 @@
 @extends('layouts.app')
+@section('title', 'Караван | Контакты')
+@section('description', 'Караван предлагает работу.')
 
 @section('content')
     <main class="main">

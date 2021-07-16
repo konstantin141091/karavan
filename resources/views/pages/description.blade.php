@@ -1,4 +1,6 @@
 @extends('layouts.app')
+@section('title', 'Караван | Вакасия - ' . $vacancy->name)
+@section('description', 'Караван предлагает работу.')
 
 @section('content')
     <main class="main">
@@ -47,7 +49,14 @@
                                 @foreach($vacancy->conditions as $item)
                                     <li class="description__column-item">{{ $item }}</li>
                                 @endforeach
+                                    <li class="description__column-item">оклад: {{ $vacancy->salary }}</li>
+                            </ul>
 
+                            <h3 class="description__column-title">
+                                Требуемый опыт
+                            </h3>
+                            <ul class="description__column-list">
+                                <li class="description__column-item">{{ $vacancy->experience }}</li>
                             </ul>
                         </div>
                         <div class="description__column-box">

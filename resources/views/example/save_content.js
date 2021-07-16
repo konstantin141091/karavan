@@ -9,6 +9,7 @@ btn.addEventListener('click', (event) => {
     let text = document.getElementById(el).textContent;
     data.push([el, data_dir, text])
   }
+  //  в data под индексом 0 => название файла в contents/название категории 1 => название директории в contents 2 => текс для обновления
 
   fetch('/myCabinet21/edit', {
     method: 'post',
@@ -21,6 +22,7 @@ btn.addEventListener('click', (event) => {
       contents: data
     })
   }).then((response) => {
+    // return response.status;
     if(response.status === 204) {
       let msg = document.getElementById('admin-msg');
       msg.style.display = 'block';

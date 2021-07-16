@@ -1,4 +1,6 @@
 @extends('layouts.app_home')
+@section('title', 'Работа в караване')
+@section('description', 'Караван предлагает работу.')
 
 @section('content')
     <main class="main">
