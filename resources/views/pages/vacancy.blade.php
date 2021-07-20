@@ -16,13 +16,13 @@
                             <div class="vacancy__toolbar-item" data-filter=".shops">
                                 <div class="vacancy__toolbar-iteminner">
                                     <img src="images/banner-3.svg" alt="">
-                                    <span>Магазины</span>
+                                    <span>Производство</span>
                                 </div>
                             </div>
                             <div class="vacancy__toolbar-item" data-filter=".factory">
                                 <div class="vacancy__toolbar-iteminner active">
                                     <img src="images/adv-1.svg" alt="">
-                                    <span>Производство</span>
+                                    <span>Магазины</span>
                                 </div>
                             </div>
                             <div class="vacancy__toolbar-item" data-filter=".office">
@@ -35,7 +35,7 @@
 
                         <div class="vacancy__list mix shops">
                             @forelse($vacancies as $item)
-                                @if($item->category_id === 1)
+                                @if($item->category_id === 2)
                                     <div class="vacancy__item">
                                         <h3 class="vacancy__item-title">
                                             {{ $item->name }}
@@ -55,7 +55,7 @@
 
                         <div class="vacancy__list mix factory">
                             @forelse($vacancies as $item)
-                                @if($item->category_id === 2)
+                                @if($item->category_id === 1)
                                     <div class="vacancy__item">
                                         <h3 class="vacancy__item-title">
                                             {{ $item->name }}

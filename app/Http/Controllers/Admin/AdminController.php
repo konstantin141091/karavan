@@ -26,7 +26,5 @@ class AdminController extends Controller
         } catch (\Exception $exception) {
             return response()->json(['answer' => 'error'], '500');
         }
-
-
     }
 }
